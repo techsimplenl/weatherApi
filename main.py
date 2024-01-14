@@ -9,6 +9,6 @@ if __name__ == "__main__":
     # data = py() # run main function
     URI = "https://api.weatherapi.com/v1/forecast.json"
     api_key = os.environ.get('API-KEY') #here
-    params = {"key": api_key,"q":'38.5934,0.6725','days':5}
+    params = {"key": api_key,"q":'38.5934,0.6725','days':1}
     args={'url':URI,'params':params}
     Operations(args).presenting_data_with_matplot()

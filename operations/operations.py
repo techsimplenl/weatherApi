@@ -43,7 +43,6 @@ class Operations:
         plt.title(f"Temperature trends from : {kwargs['city']} - {kwargs['name']}")
         plt.xticks(numeric_dates,kwargs['list_dates']) # Use actual dates as x-axis labels
         plt.legend() # Display legend
-        # plt.savefig('my_plot.png')
         # Display the plot
         plt.show()
 
