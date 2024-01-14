@@ -5,7 +5,13 @@ from private.request import GetApiFromWeather
 from operations.operations import Operations
 from operations.save_data_to_jsonfile import resenting_data_with_matplot
 
+import os
+from dotenv import load_dotenv
+
+
 matplotlib.use('TkAgg')  # Use the TkAgg backend
+
+load_dotenv()
 
 def reutrn_data_to_save(weather:WeatherEntity):
     """data to save""" 
@@ -42,8 +48,8 @@ def py():
     """All variables and functions here"""
     base_url = 'https://api.weatherapi.com/v1'
     url = base_url +"/forecast.json"
-    api_key = '66c7c4d9d45644d685c182344241201'
-    params = {"key": api_key,"q":'38.5934,0.6725','days':5}
+    api_key = os.environ.get('API-KEY') #here
+    params = {"key": api_key,"q":'38.5934,0.6725','days':14}
     result = GetApiFromWeather(url,params).get_api_data()
     if result:
         # here we have to save this data in files
