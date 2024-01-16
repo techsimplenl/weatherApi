@@ -31,7 +31,6 @@ class Operations:
     def design_plot_with_matlib(self,**kwargs):
         """Plot for represententing the temperature trends per day in your region"""
         # Convert dates to numerical values for plotting
-        print(kwargs)
         numeric_dates = range(len(kwargs['list_dates']))
         #Plotting the data
         plt.plot(numeric_dates, kwargs['list_max_temp_c'], label='Max Temperature', marker='o')
