@@ -35,7 +35,10 @@ class Operations:
         #Plotting the data
         plt.plot(numeric_dates, kwargs['list_max_temp_c'], label='Max Temperature', marker='o')
         plt.plot(numeric_dates, kwargs['list_min_temp'], label='Min Temperature', marker='o')
-        plt.plot(numeric_dates, kwargs['list_average_temp'], label='Average Temperature', marker='o')
+        plt.plot(
+            numeric_dates,
+            kwargs['list_average_temp'],
+            label='Average Temperature', marker='o')
         #Adding labels and tittle
         plt.xlabel("Dates")
         plt.ylabel("Temperature (°C)")
